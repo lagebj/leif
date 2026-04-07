@@ -1,10 +1,3 @@
-## Step 9 — Replace `README.md` with the real setup and usage guide
-
-The current README is only scaffolding. Replace it now with something that actually explains the repo.
-
-Replace the full contents of `README.md` with this:
-
-````md
 # Leif
 
 Leif is a local AI assistant framework built for grounded, principle-driven reasoning.
@@ -57,7 +50,8 @@ leif/
     ├── ask.py
     ├── chunk_docs.py
     └── embed_docs.py
-````
+    └── eval.py
+```
 
 ## Requirements
 
@@ -72,7 +66,7 @@ leif/
 ### 1. Clone the repo
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/lagebj/leif.git
 cd leif
 ```
 
