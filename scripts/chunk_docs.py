@@ -2,6 +2,10 @@ import json
 import os
 from pathlib import Path
 
+from config import load_dotenv
+
+load_dotenv()
+
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATA_DIR = ROOT / "data" / "examples"
 PROCESSED_DIR = ROOT / "data" / "processed"

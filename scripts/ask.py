@@ -5,6 +5,10 @@ import sys
 import urllib.request
 from pathlib import Path
 
+from config import load_dotenv
+
+load_dotenv()
+
 ROOT = Path(__file__).resolve().parent.parent
 SYSTEM_FILE = ROOT / "prompts" / "system.txt"
 EMBEDDINGS_FILE = ROOT / "data" / "processed" / "embeddings.json"

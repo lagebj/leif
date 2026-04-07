@@ -3,6 +3,10 @@ import os
 import urllib.request
 from pathlib import Path
 
+from config import load_dotenv
+
+load_dotenv()
+
 ROOT = Path(__file__).resolve().parent.parent
 CHUNKS_FILE = ROOT / "data" / "processed" / "chunks.jsonl"
 OUTPUT_FILE = ROOT / "data" / "processed" / "embeddings.json"

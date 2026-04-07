@@ -2,6 +2,10 @@ import json
 import sys
 from pathlib import Path
 
+from config import load_dotenv
+
+load_dotenv()
+
 ROOT = Path(__file__).resolve().parent.parent
 EVAL_CASES_FILE = ROOT / "eval" / "eval_cases.jsonl"
 
