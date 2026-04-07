@@ -169,6 +169,65 @@ data/processed/embeddings.json
 python3 scripts/ask.py "Explain why abstraction can create operational risk."
 ```
 
+## Local HTTP interface
+
+Leif can be exposed as a small local HTTP service for integration with external agent frameworks such as Paperclip.
+
+### Start the server
+
+```bash
+python3 scripts/server.py
+```
+
+### Health check
+
+```bash
+curl http://127.0.0.1:8787/health
+```
+
+Example response:
+
+```json
+{"ok": true, "service": "leif"}
+```
+
+### Invoke endpoint
+
+```bash
+curl -X POST http://127.0.0.1:8787/invoke \
+  -H "Content-Type: application/json" \
+  -d '{"message":"Why does process theater create drag?"}'
+```
+
+Example response:
+
+```json
+{
+  "ok": true,
+  "message": "...",
+  "sources": [
+    {"source": "principles.md", "id": "principles.md-0"}
+  ]
+}
+```
+
+### Webhook-style endpoint
+
+Leif also exposes:
+
+```text
+POST /webhook/adapter
+```
+
+This exists as a Paperclip-facing path for HTTP adapter integration.
+
+### Current limitations
+
+* synchronous only
+* single-process server
+* embeddings are loaded at startup
+* restart the server after regenerating embeddings
+
 ## Day 2 operations
 
 Leif is not a one-time setup. It needs maintenance if you want the behavior to stay sharp and the context to stay relevant.

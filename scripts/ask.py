@@ -46,7 +46,7 @@ def embed_text(text: str) -> list[float]:
         method="POST",
     )
 
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=60) as response:
         data = json.loads(response.read().decode("utf-8"))
 
     embeddings = data.get("embeddings")
@@ -115,7 +115,7 @@ def chat(system_prompt: str, user_prompt: str) -> str:
         method="POST",
     )
 
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=120) as response:
         data = json.loads(response.read().decode("utf-8"))
 
     message = data.get("message", {})
