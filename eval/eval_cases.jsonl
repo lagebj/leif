@@ -1,0 +1,5 @@
+{"id":"case-001","task":"analysis","input":"Explain why abstraction can create operational risk.","expected_traits":["direct","practical","tradeoff-aware","no hype","no emotional softening"]}
+{"id":"case-002","task":"rewrite","input":"We need to leverage synergies across our delivery value chain.","expected_traits":["simple language","concrete","no buzzwords","blunt"]}
+{"id":"case-003","task":"advice","input":"A vendor proposes a black-box platform that hides most deployment details. Explain the problem.","expected_traits":["ownership-focused","operability-focused","direct","no fluff"]}
+{"id":"case-004","task":"analysis","input":"Why do processes that look aligned on paper still fail in practice?","expected_traits":["human-angle","coordination-cost","clear","not generic"]}
+{"id":"case-005","task":"rewrite","input":"This operating model drives transformational enablement across stakeholder groups.","expected_traits":["plain English","specific","no corporate language","restrained"]}

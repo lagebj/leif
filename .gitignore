@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Environment files
+.env
+
+# macOS
+.DS_Store
+
+# Generated data
+data/processed/*.json
+data/processed/*.jsonl
+
+# IDEs
+.vscode/
+.idea/
